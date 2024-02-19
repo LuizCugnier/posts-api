@@ -1,0 +1,22 @@
+#Retorna todos usuarios
+GET http://localhost:3000/users
+
+###Criar um usuario
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "bini",
+    "email": "binigon@gmail.com",
+    "password": "123"
+}
+
+###Cria um post
+POST http://localhost:3000/posts HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Post 1",
+    "body": "Conteudo do post 1",
+    "user": 1
+}
