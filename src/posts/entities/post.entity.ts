@@ -12,9 +12,14 @@ export class Post {
   @Column()
   body: string;
 
-  @Column()
-  authorId: number;
-
   @ManyToOne(() => User, (user) => user.posts)
   user: User;
+
+  constructor (props: {
+    title: string,
+    body: string,
+    user: number
+  }){
+    Object.assign(this, props);
+  }
 }
