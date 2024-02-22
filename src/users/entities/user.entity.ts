@@ -1,4 +1,4 @@
-import { Post } from 'src/posts/entities/post.entity';
+import { Posts } from 'src/posts/entities/posts.entity';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
@@ -15,8 +15,8 @@ export class User {
   @Column()
   password: string;
 
-  @OneToMany(() => Post, (post) => post.user)
-  posts: Post[]
+  @OneToMany(() => Posts, (post) => post.user)
+  posts: Posts[];
 
   constructor(props: { username: string; email: string; password: string }) {
     Object.assign(this, props);
