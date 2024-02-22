@@ -16,10 +16,14 @@ POST http://localhost:3000/posts HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Post 1",
-    "body": "Conteudo do post 1",
-    "user": 3
+    "title": "Post 3",
+    "body": "Conteudo do post 3",
+    "user": 2
 }
 
 ###Retorna todos posts
 GET http://localhost:3000/posts HTTP/1.1
+
+
+###Retorna um post pelo id
+GET http://localhost:3000/posts/10 HTTP/1.1
