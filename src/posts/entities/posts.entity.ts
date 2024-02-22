@@ -1,8 +1,8 @@
 import { User } from 'src/users/entities/user.entity';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
-export class Post {
+@Entity('post')
+export class Posts {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -15,11 +15,7 @@ export class Post {
   @ManyToOne(() => User, (user) => user.posts)
   user: User;
 
-  constructor (props: {
-    title: string,
-    body: string,
-    user: number
-  }){
+  constructor(props: { title: string; body: string; user: number }) {
     Object.assign(this, props);
   }
 }
