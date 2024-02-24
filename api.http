@@ -1,5 +1,6 @@
 #Retorna todos usuarios
-GET http://localhost:3000/users
+GET http://localhost:3000/users HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJiaW5pIiwiZW1haWwiOiJiaW5pZ29uQGdtYWlsLmNvbSIsImlhdCI6MTcwODc3ODk0NiwiZXhwIjoxNzA4NzgyNTQ2fQ.kT2dSwUQ_fb6Wr7tMmOsT5rzw2fH3a7T8NRd832yZRQ
 
 ###Criar um usuario
 POST http://localhost:3000/users HTTP/1.1

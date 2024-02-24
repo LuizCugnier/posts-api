@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -13,6 +14,7 @@ import { CreateUser } from './use-cases/create-user.service';
 import { UpdateUserInfo } from './use-cases/update-user.service';
 import { FindAllUsers } from './use-cases/find-all-users.service';
 import { FindUserByID } from './use-cases/find-by-id.service';
+import { AuthGuard } from 'src/auth/auth.guard';
 
 @Controller('users')
 export class UsersController {
@@ -29,6 +31,7 @@ export class UsersController {
     return this.createUser.create(createUserDto);
   }
 
+  @UseGuards(AuthGuard)
   @Get()
   findAll() {
     return this.findAllUsers.findAll();

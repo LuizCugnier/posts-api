@@ -29,4 +29,10 @@ export class AuthService {
 
     throw new UnauthorizedException('Invalid Credentials');
   }
+
+  validateToken(token: string) {
+    return this.jwtService.verify(token, {
+        secret : process.env.JWT_SECRET
+    });
+}
 }
