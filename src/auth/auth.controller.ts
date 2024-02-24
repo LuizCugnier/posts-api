@@ -17,7 +17,7 @@ export class AuthController {
     // console.log('authPayload', authPayload);
     const user = await this.authService.validateUser(authPayload);
 
-    if (!user) throw new HttpException('Invalid Credentials', 401);
+    // if (!user) throw new HttpException('Invalid Credentials', 401);
     
     return user;
   }
