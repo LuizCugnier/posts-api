@@ -12,7 +12,7 @@ content-type: application/json
 }
 
 ###Busca um usuario pelo id
-GET http://localhost:3000/users/2 HTTP/1.1
+GET http://localhost:3000/users/1 HTTP/1.1
 
 ###Login
 POST  http://localhost:3000/auth/login HTTP/1.1
