@@ -1,19 +1,19 @@
 #Retorna todos usuarios
 GET http://localhost:3000/users HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJiaW5pIiwiZW1haWwiOiJiaW5pZ29uQGdtYWlsLmNvbSIsImlhdCI6MTcwODc4MzU1MCwiZXhwIjoxNzA4Nzg3MTUwfQ.-AVSDh0eFe23EQjOMznlwTMGFw2apIvMRoHgd9isI8o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJndXRvY3VnbmllciIsImVtYWlsIjoiZ3V0b0BnbWFpbC5jb20iLCJpYXQiOjE3MDg5ODE5ODUsImV4cCI6MTcwODk4NTU4NX0.lvvfKt63aAedniOKOtMi76Bu3eOsgO7kQdOaAnEwEP8
 
 ###Criar um usuario
 POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-    "username": "gutocugnier",
-    "email": "guto@gmail.com",
-    "password": "!Guto123"
+    "username": "seppnuzau",
+    "email": "seppzinho@gmail.com",
+    "password": "!Sepp123"
 }
 
 ###Busca um usuario pelo id
-GET http://localhost:3000/users/2 HTTP/1.1
+GET http://localhost:3000/users/3 HTTP/1.1
 
 ###Login
 POST  http://localhost:3000/auth/login HTTP/1.1
@@ -21,7 +21,7 @@ content-type: application/json
 
 {
     "username": "gutocugnier",
-    "password": "$2b$10$SX3NERXpf/j0ZvIK00zcK.4KnQ2kuF1.aiGdccWdt5txvxyzy/Dsu"
+    "password": "!Sepp123"
 }
 
 
