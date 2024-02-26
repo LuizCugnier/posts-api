@@ -7,21 +7,21 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-    "username": "guto",
+    "username": "gutocugnier",
     "email": "guto@gmail.com",
-    "password": "123456"
+    "password": "!Guto123"
 }
 
 ###Busca um usuario pelo id
-GET http://localhost:3000/users/3 HTTP/1.1
+GET http://localhost:3000/users/2 HTTP/1.1
 
 ###Login
 POST  http://localhost:3000/auth/login HTTP/1.1
 content-type: application/json
 
 {
-    "username": "bini",
-    "password": "123"
+    "username": "gutocugnier",
+    "password": "$2b$10$SX3NERXpf/j0ZvIK00zcK.4KnQ2kuF1.aiGdccWdt5txvxyzy/Dsu"
 }
 
 
@@ -33,7 +33,7 @@ content-type: application/json
 {
     "title": "Post 4",
     "body": "Conteudo do post 3",
-    "user": 3
+    "user": 1
 }
 
 ###Retorna todos posts
@@ -41,4 +41,4 @@ GET http://localhost:3000/posts HTTP/1.1
 
 
 ###Retorna um post pelo id
-GET http://localhost:3000/posts/1 HTTP/1.1
+GET http://localhost:3000/posts/2 HTTP/1.1
